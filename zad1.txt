@@ -1,0 +1,36 @@
+vboxuser@ubuntu26:~/1$ cd ~
+vboxuser@ubuntu26:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos  snap
+vboxuser@ubuntu26:~$ cd ~/Documents
+vboxuser@ubuntu26:~/Documents$ ls
+vboxuser@ubuntu26:~/Documents$ mkdir Linux_Uroci
+vboxuser@ubuntu26:~/Documents$ cd Linux_Uroci
+vboxuser@ubuntu26:~/Documents/Linux_Uroci$ mkdir Teoria Praktika
+vboxuser@ubuntu26:~/Documents/Linux_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ mkdir komandi.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ mkdir uprajneniq.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ ls
+komandi.txt  uprajneniq.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ cd
+vboxuser@ubuntu26:~$ cd ~/Documents
+vboxuser@ubuntu26:~/Documents$ cd Linux_Uroci
+vboxuser@ubuntu26:~/Documents/Linux_Uroci$ cd Teoria
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ 
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ cp uprajneniq.txt ../Praktika/
+cp: -r not specified; omitting directory 'uprajneniq.txt'
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ rmdir uprajneniq.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ touch uprajneniq.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ cp uprajneniq.txt ../Praktika/
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Teoria$ cd ~
+vboxuser@ubuntu26:~$ cd Documents
+vboxuser@ubuntu26:~/Documents$ cd Linux_Uroci
+vboxuser@ubuntu26:~/Documents/Linux_Uroci$ cd Praktika
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Praktika$ ls
+uprajneniq.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Praktika$ touch otgovori.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Praktika$ ls
+otgovori.txt  uprajneniq.txt
+vboxuser@ubuntu26:~/Documents/Linux_Uroci/Praktika$ cd ..
+vboxuser@ubuntu26:~/Documents/Linux_Uroci$ ls
+Praktika  Teoria
+
