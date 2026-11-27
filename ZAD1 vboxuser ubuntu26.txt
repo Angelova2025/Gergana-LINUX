@@ -1,0 +1,267 @@
+ZAD1
+vboxuser@ubuntu26:~$ cd Documents
+vboxuser@ubuntu26:~/Documents$ mkdir linux_tasks
+vboxuser@ubuntu26:~/Documents$ ls
+Ekipen_Proekt  Linux_Uroci  Uchilishten_Proekt  linux_tasks  text.txt
+vboxuser@ubuntu26:~/Documents$ cd linux_tasks
+vboxuser@ubuntu26:~/Documents/linux_tasks$ mkdir task1
+vboxuser@ubuntu26:~/Documents/linux_tasks$ cd task1
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ mkdir lessons 
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ mkdir exercises
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ mkdir temp
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ ls
+exercises  lessons  temp
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ cd lessons
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/lessons$ touch lessons1.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/lessons$ touch lessons2.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/lessons$ ls
+lessons1.txt  lessons2.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/lessons$ cd ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ cd exercises
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/exercises$ touch exercise1.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/exercises$ touch exercise2.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/exercises$ touch draft.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/exercises$ ls
+draft.txt  exercise1.txt  exercise2.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/exercises$ rm draft.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/exercises$ ls
+exercise1.txt  exercise2.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1/exercises$ cd ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ ls
+exercises  lessons  temp
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ rmdir temp
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ ls
+exercises  lessons
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ ls lessons
+lessons1.txt  lessons2.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ ls exercises
+exercise1.txt  exercise2.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task1$ cd ..
+
+
+ZAD2
+vboxuser@ubuntu26:~/Documents/linux_tasks$ ls
+task1
+vboxuser@ubuntu26:~/Documents/linux_tasks$ mkdir task2
+vboxuser@ubuntu26:~/Documents/linux_tasks$ cd task2
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ mkdir work ready backup
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ ls
+backup  ready  work
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ cd work
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ touch plan.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ touch draft.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ nano plan.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ sort plan.txt
+Biology
+English
+Informatics
+Math
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ cp plan.txt ../backup/plan.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ mv plan.txt week1.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ nano week1.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ mv week1.txt ../ready/
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ rm draft.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ ls
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ ls ready
+ls: cannot access 'ready': No such file or directory
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ ls -la
+total 8
+drwxrwxr-x 2 vboxuser vboxuser 4096 Nov 27 07:36 .
+drwxrwxr-x 5 vboxuser vboxuser 4096 Nov 27 07:29 ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2/work$ cd ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ rmdir work
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ ls
+backup  ready
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ ls ready
+week1.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ ls backup
+plan.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ sort ready/week1.txt
+Biology
+English
+History
+Informatics
+Math
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ sort backup/plan.txt
+Biology
+English
+Informatics
+Math
+vboxuser@ubuntu26:~/Documents/linux_tasks/task2$ cd ..
+
+ZAD3
+vboxuser@ubuntu26:~/Documents/linux_tasks$ mkdir task3
+vboxuser@ubuntu26:~/Documents/linux_tasks$ cd task3
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ mkdir work shared private
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ cd work
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ nano participlants.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ sort participlants.txt
+
+Anna
+Boris
+Elena
+Georgi
+Maria
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ cp participlants.txt ../shared/club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ cp participlants.txt ../private/club_backup.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls
+participlants.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ cd ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ cd shared
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/shared$ ls
+club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/shared$ cd club_list.txt
+bash: cd: club_list.txt: Not a directory
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/shared$ cd ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ ls -l ../shared/ ../private/participlants.txt
+ls: cannot access '../shared/': No such file or directory
+ls: cannot access '../private/participlants.txt': No such file or directory
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ pwd
+/home/vboxuser/Documents/linux_tasks/task3
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ ls -l
+total 12
+drwxrwxr-x 2 vboxuser vboxuser 4096 Nov 27 07:45 private
+drwxrwxr-x 2 vboxuser vboxuser 4096 Nov 27 07:44 shared
+drwxrwxr-x 2 vboxuser vboxuser 4096 Nov 27 07:42 work
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ ls
+private  shared  work
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ cd work
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls -l participlants.txt
+-rw-rw-r-- 1 vboxuser vboxuser 31 Nov 27 07:42 participlants.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls -l ../shared/club_list.txt
+-rw-rw-r-- 1 vboxuser vboxuser 31 Nov 27 07:44 ../shared/club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls -l ../private/club_backup.txt
+-rw-rw-r-- 1 vboxuser vboxuser 31 Nov 27 07:45 ../private/club_backup.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ chmod u=rw,g=r,o=r ../shared/club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ chmod u=rw,g=,o= ../private/club_backup.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls -l ../shared/club_list.txt
+-rw-r--r-- 1 vboxuser vboxuser 31 Nov 27 07:44 ../shared/club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls -l ../private/club_backup.txt
+-rw------- 1 vboxuser vboxuser 31 Nov 27 07:45 ../private/club_backup.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ nano participlants.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ sort participlants.txt
+
+Anna
+Boris
+Elena
+Georgi
+Maria
+Petya
+Viktor
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ cp participlants.txt ../shared/club_list_updated.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ chmod u=rw,g=r,o=r ../shared/club_list_updated.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ rm.. /shared/club_list.txt
+rm..: command not found
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ rm ../shared/club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ mv ../shared/club_list_updated.txt ../shared/club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls -l ../shared/
+total 4
+-rw-r--r-- 1 vboxuser vboxuser 44 Nov 27 08:11 club_list.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ ls -l ../private/
+total 4
+-rw------- 1 vboxuser vboxuser 31 Nov 27 07:45 club_backup.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ echo "--- shared sudurjanie ---"
+--- shared sudurjanie ---
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ sort ../shared/club_list.txt
+
+Anna
+Boris
+Elena
+Georgi
+Maria
+Petya
+Viktor
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ echo 
+
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ sort
+cd
+cd
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ sort ../private/club_backup.txt
+
+Anna
+Boris
+Elena
+Georgi
+Maria
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3/work$ cd ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task3$ cd ..
+
+ZAD4
+vboxuser@ubuntu26:~/Documents/linux_tasks$ mkdir task4
+vboxuser@ubuntu26:~/Documents/linux_tasks$ cd task4
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4$ mkdir incoming teams archive temp 
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4$ cd incoming 
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ nano blue_draft.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ nano green_draft.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ sort blue_draft.txt
+
+Ani
+Boris
+Elena
+Maria
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ sort green_draft.txt
+
+Denis
+Georgi
+Petya
+Viktor
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ cp blue_draft.txt ../archive/blue_original.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ cp green_draft.txt ../archive/green_original.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ chmod 600 ../archive/blue_original.txt ../archive/green_original.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ ls -l ../archive/
+total 8
+-rw------- 1 vboxuser vboxuser 23 Nov 27 09:03 blue_original.txt
+-rw------- 1 vboxuser vboxuser 27 Nov 27 09:03 green_original.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ mv blue_draft.txt ../teams/blue.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ mv green_draft.txt ..teams/green.txt
+mv: cannot move 'green_draft.txt' to '..teams/green.txt': No such file or directory
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ mv green_draft.txt ../teams/green.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ nano ../teams/blue.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ nano ../teams/green.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ sort ../teams/blue.txt
+
+Ani
+Boris
+Maria
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ sort ../teams/green.txt
+Denis
+Elena
+Georgi
+Petya
+Viktor
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ cp ../teams/blue.txt ../temp/
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ cp ../teams/green.txt ../temp/
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ chmod 644 ../teams/blue.txt ../teams/green.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ ls -l ../teams/
+total 8
+-rw-r--r-- 1 vboxuser vboxuser 17 Nov 27 09:08 blue.txt
+-rw-r--r-- 1 vboxuser vboxuser 32 Nov 27 09:08 green.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ rm ../temp/blue.txt ../temp/green.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ ls ../temp
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ ls ../incoming
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ rmdir ../temp
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ rmdir ../incoming
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ ls -l
+total 0
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ ls -l teams
+ls: cannot access 'teams': No such file or directory
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4/incoming$ cd ..
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4$ ls -l teams
+total 8
+-rw-r--r-- 1 vboxuser vboxuser 17 Nov 27 09:08 blue.txt
+-rw-r--r-- 1 vboxuser vboxuser 32 Nov 27 09:08 green.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4$ ls archive
+blue_original.txt  green_original.txt
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4$ sort archive/blue_original.txt
+
+Ani
+Boris
+Elena
+Maria
+vboxuser@ubuntu26:~/Documents/linux_tasks/task4$ sort archive/green_original.txt
+
+Denis
+Georgi
+Petya
+Viktor
+
